@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login - TakeApp Somali</title>
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <form method="post">
+        <label>Magaca Isticmaalaha:</label><br>
+        <input type="text" name="username" required><br>
+        <label>Erayga Sirta ah:</label><br>
+        <input type="password" name="password" required><br>
+        <button type="submit">Soo gal</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>
